@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import AnimatedImage from './src/components/welcome.component/Welcome.component';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SignUp from './src/screens/AuthScreens/SignUp/SignUp';
+import SignUpWithEmail from './src/screens/AuthScreens/SignUp/SignUpWithEmail';
 
 
 const Stack = createStackNavigator()
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <NavigationContainer>
        <Stack.Navigator>
-        <Stack.Screen name=' ' component={AnimatedImage} options={
+        <Stack.Screen name=' ' component={SignUpWithEmail} options={
           {
             headerShown:false
           }

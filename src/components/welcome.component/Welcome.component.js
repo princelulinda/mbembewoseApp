@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Animated, Image,StyleSheet, View, Dimensions, Button, TouchableOpacity, Text } from 'react-native';
-import { PrimaryBGC } from '../../../assets/theme/theme';
+import { PrimaryBGC, secondaryColor, whiteColor} from '../../../assets/theme/theme';
 import { Foundation } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons' ;
 
@@ -8,30 +8,38 @@ const AnimatedImage = () => {
   return (
     <View style={styles.container}>
    <View style={{justifyContent:"center", alignItems:"center"}}>
-    <Text style={{color:"white", fontSize:30, fontWeight:"bold"}}>
+    <Text style={{color:PrimaryBGC, fontSize:30, fontWeight:"bold",}}>
       LUBUNGA
     </Text>
 
-      <Image source={require("../../../assets/mbembeLOgo.png")} style={styles.image}/>
+      <Image source={require("../../../assets/Family-pana.png")} style={styles.image}/>
    </View>
    <View>
-    <Text>
+    <Text style={{color:PrimaryBGC, fontSize:21}}>
       creer votre compte avec :
     </Text>
     </View>
-  <View style={{gap:10}}>
-  <TouchableOpacity style={styles.Button}>
-        <Foundation name="telephone" size={30} color="white" />
-        <Text style={{color:"#fff", gap:5}}>
+  <View style={{gap:10, width:"100%", padding:20}}>
+  <TouchableOpacity style={[styles.Button,{backgroundColor:PrimaryBGC,}]}>
+        <Foundation name="telephone" size={30} color={whiteColor} />
+        <Text style={{color:whiteColor, gap:5, fontSize:18}}>
           telephone
         </Text>
     </TouchableOpacity>
     <TouchableOpacity style={styles.Button}>
-        <Fontisto name="email" size={30} color="white" />
-        <Text style={{color:"#fff", gap:5}}>
+        <Fontisto name="email" size={30} color={PrimaryBGC} />
+        <Text style={{color:PrimaryBGC, gap:5, fontSize:18}}>
             email
         </Text>
     </TouchableOpacity>
+    <View style={{ flexDirection:"row", gap:5 }}>
+    <Text>
+    tu as un compte?
+    </Text>
+     <TouchableOpacity>
+       <Text style={{color:PrimaryBGC, borderBottomColor:PrimaryBGC, borderBottomWidth:1}}>se connecter</Text>
+      </TouchableOpacity> 
+    </View>
   </View>
     </View>
   );
@@ -39,27 +47,27 @@ const AnimatedImage = () => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: PrimaryBGC,
+      backgroundColor: "#FFF",
       alignItems: 'center',
       justifyContent:"center",
       gap:15
     },
     image:{
         resizeMode:"contain",
-        width:250,
-        height:250
+        width:350,
+        height:350
         
     },
     Button:{
-        paddingVertical:10,
-        paddingHorizontal:80,
+        paddingVertical:7,
         borderStyle:"solid",
         borderWidth:1,
-        borderColor:"#fff",
+        borderColor:PrimaryBGC,
         borderRadius:10,
         flexDirection:"row",
         alignItems:"center",
-        justifyContent:"center"
+        justifyContent:"center",
+        gap:30,
     }
 })
 export default AnimatedImage;
