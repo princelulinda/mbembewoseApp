@@ -1,0 +1,1 @@
+export const PrimaryBGC = "#1F2D5A"
