@@ -28,7 +28,8 @@
     "react-native-web": "~0.19.6",
     "expo-localization": "~14.8.3",
     "undefined": "expo/vector-icons",
-    "expo-av": "~13.10.5"
+    "expo-av": "~13.10.5",
+    "expo-image-picker": "~14.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
